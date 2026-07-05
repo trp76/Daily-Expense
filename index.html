@@ -645,8 +645,8 @@ $('saveTxBtn').addEventListener('click', async () => {
     });
     $('txAmount').value = ''; $('txNote').value = '';
     renderAll();
-    toast('Entry saved');
-    switchView('home');
+    toast('Entry saved — add another or switch tabs when done');
+    $('txAmount').focus();
   } catch(err){
     toast('Could not save — check connection');
   }
