@@ -1,4 +1,4 @@
-const CACHE = 'khata-v1';
+const CACHE = 'khata-v2';
 const ASSETS = ['./index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
@@ -17,11 +17,14 @@ self.addEventListener('fetch', (e) => {
   // Never cache calls to the Google Apps Script API — always go live for data.
   if (e.request.url.includes('script.google.com')) return;
 
+  // Network-first for the app shell, so updates you upload show up on next
+  // launch instead of being stuck behind an old cached copy. Falls back to
+  // the cached version only when offline.
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
+    fetch(e.request).then(res => {
       const copy = res.clone();
       caches.open(CACHE).then(c => c.put(e.request, copy));
       return res;
-    }).catch(() => cached))
+    }).catch(() => caches.match(e.request))
   );
 });
