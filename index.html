@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#1B2A3C">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Khata">
-<title>Khata — Home Expense Ledger</title>
+<meta name="apple-mobile-web-app-title" content="Daily Expense">
+<title>Daily Expense — Home Expense Ledger</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" href="icon-192.png">
@@ -77,7 +77,7 @@ header.topbar{
 }
 header.topbar .brand{display:flex;align-items:center;gap:10px;}
 header.topbar .stamp{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;color:var(--gold);font-size:15px;transform:rotate(-6deg);}
-header.topbar h1{font-family:'Fraunces',serif;font-size:19px;margin:0;letter-spacing:0.3px;}
+header.topbar h1{font-family:'Fraunces',serif;font-size:17px;margin:0;letter-spacing:0.2px;white-space:nowrap;}
 header.topbar .sub{font-size:11px;color:#B9C2CF;margin-top:1px;}
 .icon-btn{background:none;border:none;color:var(--paper);cursor:pointer;padding:6px;display:flex;}
 
@@ -226,7 +226,7 @@ nav.bottomnav button.fab.active .fabcircle{background:var(--gold);}
 <!-- ================= SETUP SCREEN ================= -->
 <div id="setupScreen">
   <div class="setup-mark">₹</div>
-  <h1>Khata</h1>
+  <h1>Daily Expense</h1>
   <p>Your daily expense ledger, backed by your own Google Sheet. Connect it once below.</p>
   <div class="setup-steps">
     Paste the <b>Web App URL</b> you got after deploying the Apps Script (see SETUP_GUIDE.md).
@@ -247,7 +247,7 @@ nav.bottomnav button.fab.active .fabcircle{background:var(--gold);}
     <div class="brand">
       <div class="stamp">₹</div>
       <div>
-        <h1>Khata</h1>
+        <h1>Daily Expense</h1>
         <div class="sub" id="todayLabel">—</div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 {
-  "name": "Khata — Home Expense Ledger",
-  "short_name": "Khata",
+  "name": "Daily Expense — Home Expense Ledger",
+  "short_name": "Daily Expense",
   "description": "Track daily expenses, cash and bank balances, backed by Google Sheets.",
   "start_url": "./index.html",
   "scope": "./",
